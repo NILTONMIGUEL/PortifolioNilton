@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev & Game Designer | Portfolio</title>
+    <!-- Fonte Google: Rajdhani & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Ícones Lucide (via FontAwesome CDN para facilidade) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+   
+</head>
+<body>
+
+    <!-- Fundo de Partículas Interativo -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">Nilton.Sousa.<span>Dev</span></div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#api">API</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+        <a href="#redes" class="btn-nav">Contato</a>
+    </header>
+
+    <!-- Hero / Sobre Mim -->
+    <section class="hero" id="sobre">
+        <div class="hero-text">
+            <h1>Criando Universos <span class="highlight">Interativos</span></h1>
+            <p>Desenvolvedor de jogos e Game Designer. Unindo lógica avançada na Unity com arte digital marcante e composições sonoras imersivas.</p>
+            
+            <div class="tags-container">
+                <span class="tag">Unity 3D/2D</span>
+                <span class="tag">Pixel Art</span>
+                <span class="tag">Vetorial</span>
+                <span class="tag">3D Low Poly</span>
+                <span class="tag">Sound Design</span>
+            </div>
+        </div>
+
+        <div class="profile-container">
+            <div class="profile-wrapper">
+                <div class="profile-img-box">
+                    <!-- Substitua o src pela sua foto de perfil -->
+                    <img src="assets/images/niltonsousa01.jpg" alt="Sua Foto de Perfil">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+        <h2 class="section-title">Especialidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3>Game Design & Unity</h3>
+                <p>Arquitetura de jogos completa em C#, implementação de mecânicas fluidas e físicas otimizadas para 2D e 3D.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-cubes"></i>
+                <h3>3D Low Poly</h3>
+                <p>Modelagem e texturização estilizada focada em alta performance e estética retrô-moderna marcante.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-border-none"></i>
+                <h3>Pixel Art & Vetorial</h3>
+                <p>Animações sprite-by-sprite com alma retrô e artes vetoriais limpas para UI e ambientes.</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-music"></i>
+                <h3>Trilhas & SFX</h3>
+                <p>Composição musical original e produção de efeitos sonoros imersivos que dão vida ao universo do jogo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section id="api">
+        <h2 class="section-title">APIs & Integrações</h2>
+        <div class="api-container">
+            <div>
+                <h3 style="font-family: var(--font-title); font-size: 2rem; margin-bottom: 1rem;">Conectividade & Nuvem</h3>
+                <p style="color: var(--text-dim);">Sistemas customizados para Leaderboards online, salvamento em nuvem, conquistas e autenticação de jogadores integrados diretamente nos jogos.</p>
+            </div>
+            <div class="code-block">
+                <span class="code-keyword">asyncTask</span> <span class="code-func">SyncPlayerData</span>(string playerID) {<br>
+                &nbsp;&nbsp;<span class="code-keyword">var</span> response = <span class="code-keyword">await</span> API.<span class="code-func">GetAsync</span>(<span class="code-string">$"https://api.devstudio.io/v1/user/{playerID}"</span>);<br>
+                &nbsp;&nbsp;<span class="code-keyword">if</span> (response.IsSuccess) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;GameManager.Instance.<span class="code-func">LoadSave</span>(response.Data);<br>
+                &nbsp;&nbsp;}<br>
+                }
+            </div>
+            
+        </div>
+        <div style="width: 100%; text-align: center; margin-top:20px">
+            <a href="#api" class="btn-primary">
+                <i class="fa-solid fa-code"></i> Ver APIs
+            </a>
+            <!-- <a href="#redes" class="btn-secondary">
+                <i class="fa-solid fa-paper-plane"></i> Entrar em Contato
+            </a> -->
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2 class="section-title">Últimos Artigos</h2>
+        <div class="blog-grid">
+            <!-- Post 1
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=600" alt="Pixel Art Blog" class="blog-img">
+                <div class="blog-content">
+                    <span class="blog-tag">Game Dev</span>
+                    <h3 class="blog-title">Otimizando Animações em Pixel Art na Unity</h3>
+                    <p class="blog-excerpt">Técnicas de Sprite Sheets e iluminação 2D para manter 60 FPS sem perder o charme retrô.</p>
+                    <a href="#" class="blog-link">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            Post 2
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600" alt="3D Low Poly" class="blog-img">
+                <div class="blog-content">
+                    <span class="blog-tag">3D Art</span>
+                    <h3 class="blog-title">A Estética Low Poly no Game Design Moderno</h3>
+                    <p class="blog-excerpt">Como usar paletas de cores e iluminação estilizada para criar cenários incríveis com poucos polígonos.</p>
+                    <a href="#" class="blog-link">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Post 3 --
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600" alt="Audio Design" class="blog-img">
+                <div class="blog-content">
+                    <span class="blog-tag">Audio</span>
+                    <h3 class="blog-title">Construindo Trilhas Sonoras Reativas</h3>
+                    <p class="blog-excerpt">Como alterar camadas musicais dinamicamente de acordo com a intensidade da gameplay.</p>
+                    <a href="#" class="blog-link">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article> -->
+        </div>
+    </section>
+
+    <!-- Redes Sociais / Rodapé -->
+    <section class="social-section" id="redes">
+        <h2 class="section-title">Conecte-se Comigo</h2>
+        <p style="color: var(--text-dim);">Acompanhe meus projetos, repositories de código e produções de áudio.</p>
+        
+        <div class="social-links">
+            <a href="https://github.com/NILTONMIGUEL" class="social-btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <!-- <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> -->
+            <a href="#" class="social-btn"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-artstation"></i> ArtStation</a>
+        </div>
+    </section>
+
+   <script src="assets/js/functon.js"></script>
+</body>
+</html>

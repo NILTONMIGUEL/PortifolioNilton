@@ -8,170 +8,304 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Ícones Lucide (via FontAwesome CDN para facilidade) -->
+    <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
-   
 </head>
 <body>
 
-    <!-- Fundo de Partículas Interativo -->
+    <!-- Canvas de partículas no fundo -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- Header / Navbar -->
     <header>
-        <div class="logo">Nilton.Sousa.<span>Dev</span></div>
+        <div class="logo" onclick="showLandingPage()">Nilton.<span>Sousa</span></div>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#api">API</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="#sobre" onclick="showLandingPage()">Sobre</a></li>
+                <li><a href="#habilidades" onclick="showLandingPage()">Habilidades</a></li>
+                <li><a href="#api" onclick="showLandingPage()">API</a></li>
+                <li><a href="#blog" onclick="showLandingPage()">Blog</a></li>
             </ul>
         </nav>
-        <a href="#redes" class="btn-nav">Contato</a>
+        <a href="#redes" class="btn-nav" onclick="showLandingPage()">Contato</a>
     </header>
 
-    <!-- Hero / Sobre Mim -->
-    <section class="hero" id="sobre">
-        <div class="hero-text">
-            <h1>Criando Universos <span class="highlight">Interativos</span></h1>
-            <p>Desenvolvedor de jogos e Game Designer. Unindo lógica avançada na Unity com arte digital marcante e composições sonoras imersivas.</p>
-            
-            <div class="tags-container">
-                <span class="tag">Unity 3D/2D</span>
-                <span class="tag">Pixel Art</span>
-                <span class="tag">Vetorial</span>
-                <span class="tag">3D Low Poly</span>
-                <span class="tag">Sound Design</span>
-            </div>
-        </div>
-
-        <div class="profile-container">
-            <div class="profile-wrapper">
-                <div class="profile-img-box">
-                    <!-- Substitua o src pela sua foto de perfil -->
-                    <img src="assets/images/niltonsousa01.jpg" alt="Sua Foto de Perfil">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Habilidades -->
-    <section id="habilidades">
-        <h2 class="section-title">Especialidades</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fa-solid fa-gamepad"></i>
-                <h3>Game Design & Unity</h3>
-                <p>Arquitetura de jogos completa em C#, implementação de mecânicas fluidas e físicas otimizadas para 2D e 3D.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-cubes"></i>
-                <h3>3D Low Poly</h3>
-                <p>Modelagem e texturização estilizada focada em alta performance e estética retrô-moderna marcante.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-border-none"></i>
-                <h3>Pixel Art & Vetorial</h3>
-                <p>Animações sprite-by-sprite com alma retrô e artes vetoriais limpas para UI e ambientes.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fa-solid fa-music"></i>
-                <h3>Trilhas & SFX</h3>
-                <p>Composição musical original e produção de efeitos sonoros imersivos que dão vida ao universo do jogo.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- API Section -->
-    <section id="api">
-        <h2 class="section-title">APIs & Integrações</h2>
-        <div class="api-container">
-            <div>
-                <h3 style="font-family: var(--font-title); font-size: 2rem; margin-bottom: 1rem;">Conectividade & Nuvem</h3>
-                <p style="color: var(--text-dim);">Sistemas customizados para Leaderboards online, salvamento em nuvem, conquistas e autenticação de jogadores integrados diretamente nos jogos.</p>
-            </div>
-            <div class="code-block">
-                <span class="code-keyword">asyncTask</span> <span class="code-func">SyncPlayerData</span>(string playerID) {<br>
-                &nbsp;&nbsp;<span class="code-keyword">var</span> response = <span class="code-keyword">await</span> API.<span class="code-func">GetAsync</span>(<span class="code-string">$"https://api.devstudio.io/v1/user/{playerID}"</span>);<br>
-                &nbsp;&nbsp;<span class="code-keyword">if</span> (response.IsSuccess) {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;GameManager.Instance.<span class="code-func">LoadSave</span>(response.Data);<br>
-                &nbsp;&nbsp;}<br>
-                }
-            </div>
-            
-        </div>
-        <div style="width: 100%; text-align: center; margin-top:20px">
-            <a href="#api" class="btn-primary">
-                <i class="fa-solid fa-code"></i> Ver APIs
-            </a>
-            <!-- <a href="#redes" class="btn-secondary">
-                <i class="fa-solid fa-paper-plane"></i> Entrar em Contato
-            </a> -->
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2 class="section-title">Últimos Artigos</h2>
-        <div class="blog-grid">
-            <!-- Post 1
-            <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=600" alt="Pixel Art Blog" class="blog-img">
-                <div class="blog-content">
-                    <span class="blog-tag">Game Dev</span>
-                    <h3 class="blog-title">Otimizando Animações em Pixel Art na Unity</h3>
-                    <p class="blog-excerpt">Técnicas de Sprite Sheets e iluminação 2D para manter 60 FPS sem perder o charme retrô.</p>
-                    <a href="#" class="blog-link">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            Post 2
-            <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=600" alt="3D Low Poly" class="blog-img">
-                <div class="blog-content">
-                    <span class="blog-tag">3D Art</span>
-                    <h3 class="blog-title">A Estética Low Poly no Game Design Moderno</h3>
-                    <p class="blog-excerpt">Como usar paletas de cores e iluminação estilizada para criar cenários incríveis com poucos polígonos.</p>
-                    <a href="#" class="blog-link">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Post 3 --
-            <article class="blog-card">
-                <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600" alt="Audio Design" class="blog-img">
-                <div class="blog-content">
-                    <span class="blog-tag">Audio</span>
-                    <h3 class="blog-title">Construindo Trilhas Sonoras Reativas</h3>
-                    <p class="blog-excerpt">Como alterar camadas musicais dinamicamente de acordo com a intensidade da gameplay.</p>
-                    <a href="#" class="blog-link">Ler Artigo <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </article> -->
-        </div>
-    </section>
-
-    <!-- Redes Sociais / Rodapé -->
-    <section class="social-section" id="redes">
-        <h2 class="section-title">Conecte-se Comigo</h2>
-        <p style="color: var(--text-dim);">Acompanhe meus projetos, repositories de código e produções de áudio.</p>
+    <!-- ========================================== -->
+    <!-- VIEW 1: LANDING PAGE (PÁGINA PRINCIPAL)     -->
+    <!-- ========================================== -->
+    <div id="landing-view" class="page-view active">
         
-        <div class="social-links">
-            <a href="https://github.com/NILTONMIGUEL" class="social-btn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            <!-- <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> -->
-            <a href="#" class="social-btn"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
-            <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
-            <a href="#" class="social-btn"><i class="fa-brands fa-artstation"></i> ArtStation</a>
-            <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
-            <a href="#" class="social-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;">
-                <path d="M16.63 2H7.37C4.41 2 2 4.41 2 7.37v9.26C2 19.59 4.41 22 7.37 22h9.26c2.96 0 5.37-2.41 5.37-5.37V7.37C22 4.41 19.59 2 16.63 2zM12 17.5c-3.04 0-5.5-2.46-5.5-5.5S8.96 6.5 12 6.5s5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5z"/>
-            </svg>
-            Kwai
-            </a>
-        </div>
-    </section>
+        <!-- Hero Section -->
+        <!--<section class="hero" id="sobre">
+            <div class="hero-text">
+                <h1>Criando Universos <span class="highlight">Interativos</span></h1>
+                <p>Desenvolvedor de jogos e Game Designer. Unindo lógica avançada na Unity com arte digital marcante e composições sonoras imersivas.</p>
+                
+                <div class="tags-container">
+                    <span class="tag">Unity 3D/2D</span>
+                    <span class="tag">Pixel Art</span>
+                    <span class="tag">Vetorial</span>
+                    <span class="tag">3D Low Poly</span>
+                    <span class="tag">Sound Design</span>
+                </div>
 
-   <script src="assets/js/functon.js"></script>
-</body>
+                <!-- <div class="hero-actions">
+                    <a href="#api" class="btn-primary">
+                        <i class="fa-solid fa-code"></i> Ver APIs
+                    </a>
+                </div> 
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-wrapper">
+                    <div class="profile-img-box">
+                        <img src="assets/images/niltonsousa01.jpg" alt="Foto de Perfil nilton sousa">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- HERO SECTION COM VÍDEO DE FUNDO -->
+        <section class="hero" id="sobre">
+            
+            <!-- VÍDEO EM LOOP -->
+            <div class="hero-video-wrapper">
+                <video autoplay loop muted playsinline class="hero-video">
+                    <!-- Substitua o link abaixo pela URL do seu vídeo ou arquivo local (ex: assets/showreel.mp4) -->
+                    <source src="assets/videos/video.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos em HTML5.
+                </video>
+                <!-- Camada escura e neon sobre o vídeo para dar leitura ao texto -->
+                <div class="hero-video-overlay"></div>
+            </div>
+
+            <!-- CONTEÚDO DA HERO SECTION -->
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Criando Universos <span class="highlight">Interativos</span></h1>
+                    <p>Desenvolvedor de jogos e Game Designer. Unindo lógica avançada na Unity com arte digital marcante e composições sonoras imersivas.</p>
+                    
+                    <div class="tags-container">
+                        <span class="tag n">Unity 3D/2D</span>
+                        <span class="tag n">Pixel Art</span>
+                        <span class="tag n">Vetorial</span>
+                        <span class="tag n">3D Low Poly</span>
+                        <span class="tag n">Sound Design</span>
+                    </div>
+
+                    <!-- <div class="hero-actions">
+                        <a href="#api" class="btn-primary">
+                            <i class="fa-solid fa-code"></i> Ver APIs
+                        </a>
+                    </div> -->
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-wrapper">
+                        <div class="profile-img-box">
+                            <img src="assets/images/NILTON01.png" alt="Foto de Perfil">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Habilidades -->
+        <section id="habilidades">
+            <h2 class="section-title">Especialidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h3>Game Design & Unity</h3>
+                    <p>Arquitetura de jogos completa em C#, implementação de mecânicas fluidas e físicas otimizadas.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-cubes"></i>
+                    <h3>3D Low Poly</h3>
+                    <p>Modelagem e texturização estilizada focada em alta performance e estética marcante.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-border-none"></i>
+                    <h3>Pixel Art & Vetorial</h3>
+                    <p>Animações sprite-by-sprite com alma retrô e artes vetoriais limpas para UI.</p>
+                </div>
+                <!-- <div class="skill-card">
+                    <i class="fa-solid fa-music"></i>
+                    <h3>Trilhas & SFX</h3>
+                    <p>Composição musical original e produção de efeitos sonoros imersivos.</p>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- API Section -->
+        <section id="api">
+            <h2 class="section-title">APIs & Integrações</h2>
+            <div class="api-container">
+                <div>
+                    <h3 style="font-family: var(--font-title); font-size: 2rem; margin-bottom: 1rem;">Conectividade & Nuvem</h3>
+                    <p style="color: var(--text-dim);">Sistemas customizados para Leaderboards online, salvamento em nuvem, conquistas e autenticação de jogadores.</p>
+                </div>
+                <div class="code-block">
+                    <span class="code-keyword">asyncTask</span> <span class="code-func">SyncPlayerData</span>(string playerID) {<br>
+                    &nbsp;&nbsp;<span class="code-keyword">var</span> response = <span class="code-keyword">await</span> API.<span class="code-func">GetAsync</span>(<span class="code-string">$"https://api.devstudio.io/v1/user/{playerID}"</span>);<br>
+                    &nbsp;&nbsp;<span class="code-keyword">if</span> (response.IsSuccess) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;GameManager.Instance.<span class="code-func">LoadSave</span>(response.Data);<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+            </div>
+            <div class="hero-actions" style="text-align: center; width: 100%;">
+                <a href="#api" class="btn-primary" style="margin: 0 auto;">
+                    <i class="fa-solid fa-code"></i> Ver APIs
+                </a>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog">
+            <h2 class="section-title">Últimos Artigos</h2>
+            <div class="blog-grid">
+                
+                <!-- Post 1 -->
+                <article class="blog-card">
+                    <img src="assets/images/variaveis.jpg" alt="Variáveis Blog" class="blog-img">
+                    <div class="blog-content">
+                        <span class="blog-tag">Game Dev</span>
+                        <h3 class="blog-title">Variáveis no C#</h3>
+                        <p class="blog-excerpt">Como criar variáveis ? para quê serve ?.</p>
+                        <button class="blog-btn" onclick="openArticle('post-1')">
+                            Ler Artigo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                
+                <!--Post 2 --> 
+                <article class="blog-card">
+                    <img src="assets/images/metodoscsharp.jpg" alt="métodos c# para unity" class="blog-img">
+                    <div class="blog-content">
+                        <span class="blog-tag">Game Dev</span>
+                        <h3 class="blog-title">Métodos em c# para Unity</h3>
+                        <p class="blog-excerpt">Como criar métodos em C# ? e como chamar</p>
+                        <button class="blog-btn" onclick="openArticle('post-2')">
+                            Ler Artigo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Post 3 
+                <article class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=600" alt="Audio Design" class="blog-img">
+                    <div class="blog-content">
+                        <span class="blog-tag">Audio</span>
+                        <h3 class="blog-title">Construindo Trilhas Sonoras Reativas</h3>
+                        <p class="blog-excerpt">Como alterar camadas musicais dinamicamente de acordo com a intensidade da gameplay.</p>
+                        <button class="blog-btn" onclick="openArticle('post-3')">
+                            Ler Artigo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>-->
+
+            </div>
+            <div class="hero-actions" style="text-align: center; width: 100%;">
+                <a href="#" class="btn-primary" style="margin: 0 auto;" onclick="showFullBlog()":>
+                    <!-- <i class="fa-solid fa-code"></i>-->Ver todos os Blogs 
+                </a>
+            </div>
+        </section>
+
+        <!-- Redes Sociais -->
+        <section class="social-section" id="redes">
+            <h2 class="section-title">Conecte-se Comigo</h2>
+            <p style="color: var(--text-dim);">Acompanhe meus projetos, repositórios de código e produções musicais.</p>
+            <div class="social-links">
+                <a href="https://github.com/NILTONMIGUEL" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                <!-- <a href="#" class="social-btn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> -->
+                <a href="https://niltonsousadev.itch.io/" target="_blank" class="social-btn"><i class="fa-brands fa-itch-io"></i> Itch.io</a>
+                <a href="https://www.youtube.com/@nilton_sousa_dev" target="_blank" class="social-btn"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                <a href="https://www.tiktok.com/@nilton_miguel" target="_blank" class="social-btn"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+                <a href="https://www.instagram.com/nilton.sousa.dev" target="_blank" class="social-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <!-- <a href="#" class="social-btn"><i class="fa-brands fa-artstation"></i> ArtStation</a> -->
+                <a href="https://www.kwai.com/@nilton_Sousa_Dev" target="_blank" class="social-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -0.125em;">
+                        <path d="M16.63 2H7.37C4.41 2 2 4.41 2 7.37v9.26C2 19.59 4.41 22 7.37 22h9.26c2.96 0 5.37-2.41 5.37-5.37V7.37C22 4.41 19.59 2 16.63 2zM12 17.5c-3.04 0-5.5-2.46-5.5-5.5S8.96 6.5 12 6.5s5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5z"/>
+                    </svg>
+                    Kwai
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: PÁGINA DO ARTIGO LIDO             -->
+    <!-- ========================================== -->
+    <div id="article-view" class="page-view">
+        <section class="article-page">
+            <header class="article-header" style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: start;">
+                <span class="blog-tag" id="art-tag">TAG</span>
+                <h1 id="art-title">Título do Artigo</h1>
+                <div class="article-meta" style="width: 100%;">
+                    <span><i class="fa-regular fa-calendar"></i> <span id="art-date">Data</span></span>
+                    <span><i class="fa-regular fa-clock"></i> 5 min de leitura</span>
+                </div>
+                 <button class="btn-back" onclick="showLandingPage()">
+                    <i class="fa-solid fa-arrow-left"></i> Voltar para o Início
+                </button>
+            </header>
+
+            <img id="art-img" src="" alt="Imagem do Artigo" class="article-hero-img">
+
+            <div class="article-body" id="art-body">
+                <!-- O conteúdo textual completo é injetado via JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: PÁGINA COMPLETA DO BLOG (BLOG VIEW) -->
+    <!-- ========================================== -->
+    <div id="full-blog-view" class="page-view">
+        <section style="padding-top: 8rem; max-width: 1200px; margin: 0 auto;">
+            
+            <button class="btn-back" onclick="showLandingPage()">
+                <i class="fa-solid fa-arrow-left"></i> Voltar para a Landing Page
+            </button>
+
+            <h2 class="section-title">Blog & Artigos Técnicos</h2>
+            <p style="text-align: center; color: var(--text-dim); margin-top: -2rem; margin-bottom: 3rem;">
+                Tutoriais, breakdowns de desenvolvimento, técnicas de arte e composição sonora para jogos.
+            </p>
+
+            <!-- BARRA DE PESQUISA E FILTROS DE CATEGORIA -->
+            <div class="blog-filter-container">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="blog-search" placeholder="Pesquisar artigos..." oninput="filterArticles()">
+                </div>
+
+                <div class="category-filters">
+                    <button class="filter-btn active" onclick="setCategoryFilter('all', this)">Todos</button>
+                    <button class="filter-btn" onclick="setCategoryFilter('Game Dev', this)">Game Dev</button>
+                    <button class="filter-btn" onclick="setCategoryFilter('3D Art', this)">3D Art</button>
+                    <button class="filter-btn" onclick="setCategoryFilter('Pixel Art', this)">Pixel Art</button>
+                    <button class="filter-btn" onclick="setCategoryFilter('Audio', this)">Audio</button>
+                </div>
+            </div>
+
+            <!-- GRID COMPLETA DE ARTIGOS (ALIMENTADA VIA JAVASCRIPT) -->
+            <div class="blog-grid" id="full-blog-grid">
+                <!-- Os artigos serão renderizados automaticamente aqui -->
+            </div>
+
+        </section>
+    </div>
+
+    <!-- JAVASCRIPT: PARTÍCULAS E NAVEGAÇÃO -->
+    <script src="assets/js/functon.js"></script>
+</body> 
 </html>
+
+
+

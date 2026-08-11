@@ -154,6 +154,48 @@ const articlesData = {
             <p><b>🎮 Métodos em C# — o que são e para que servem?</b><br>
             Um método é um bloco de código com nome que executa uma ação específica. Pense nele como uma "receita": você escreve os passos uma única vez e pode chamá-lo pelo nome quando precisar.</p>
 
+            <p style="color:red"><b style="color:red">obs:</b> antes de usar o <span class="s">this</span> é importante declarar as váriaveis antes.<br>
+            o <span class="s">this </span> só existe na classe. <br>
+            <b style="color:orange">Como Estudar sem o <span class="s"> this </span> ?
+
+            <ul>
+               
+                <li style="color:white"> 1- criar variaveis normais <br>
+                    <span class="t">int</span> <span class="v">numero1</span> <span class="o">=</span> <span class="n">10</span> <span class="p">;</span><br>
+                    <span class="t">int</span> <span class="v">numero2</span> <span class="o">=</span> <span class="n">4</span> <span class="p">;</span><br>
+                </li>
+
+                 <li style="color:white"> 2- onde tem <span class="s">this.</span> você coloca o valor da variável normal<br>
+                    <b style="color:red">EX:</b><br>
+                    <span class="k">void</span> <span class="m">Somar</span> <span class="p">(</span> <span class="p">)</span><br>
+                    <span class="p">{</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">int</span> <span class="v">resultado</span> <span class="o">=</span> <span class="v">numero1</span> <span class="o">+</span> <span class="v">numero2</span> <span class="p">;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="v">resultado</span> <span class="p">)</span> <span class="p">;</span><br>
+                    <span class="p">}</span><br>
+                    <strong style="color:red">você passa apenas a variável , isso serve para todos</strong>
+                </li>
+
+                <strong style="color:white"> forma certa </strong> <br>
+                <b style="color:red">EX:</b><br>
+                <span class="k">void</span> <span class="m">Somar</span> <span class="p">(</span> <span class="p">)</span><br>
+                <span class="p">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">int</span> <span class="v">resultado</span> <span class="o">=</span> <span class="v">numero1</span> <span class="o">+</span> <span class="v">numero2</span> <span class="p">;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="v">resultado</span> <span class="p">)</span> <span class="p">;</span><br>
+                <span class="p">}</span><br> <br>
+                <strong style="color:red"> forma errada </strong> <br>
+                <span class="k">void</span> <span class="m">Somar()</span> <br>
+                <span class="p">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="t"> int </span> <span class="v">resultado</span> <span class="o">=</span> <span class="s">this.</span> <span class="v">numero1</span> <span class="o">+</span> <span class="s">this.</span> <span class="v">numero2</span> <span class="p">;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug.Log(<span class="v">resultado</span>);</span><br>
+                <span class="p">}</span>
+
+            </ul>
+            </p>
+            <h2> Agora podemos Iniciar o estudo de Métodos </h2>
+            <strong style="color:white"> primeiramente crie as variáveis </strong> <br>
+            <span class="t">int</span> <span class="v">numero1</span> <span class="o">=</span> <span class="n">10</span> <span class="p">;</span><br>
+            <span class="t">int</span> <span class="v">numero2</span> <span class="o">=</span> <span class="n">4</span> <span class="p">;</span><br>
+            <p> coloque o valor que desejar, essas variaveis vão servir para para usar-mos como parâmetros.</p>
             <h2>Criando os Métodos</h2>
             <ul>
                 <li><strong>Método sem retorno e sem parâmetros:</strong><br>

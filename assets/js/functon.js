@@ -251,6 +251,120 @@ const articlesData = {
                 </li>
             </ul>
         `
+    },
+    'post-3': {
+        id: 'post-3',
+        category: 'Game Dev',
+        tag: 'Game Dev',
+        title: 'Métodos start e update C# para Unity',
+        date: 'Publicado 11 de agosto de 2026',
+        image: 'assets/images/void_updatePadroesUnity.jpg',
+        content: `
+            <span style="color: orangered;">void Start() ⇐ </span> <span>é chamado apenas uma vez assim que inicia o game</span> <br>
+            <span style="color: orangered;">void Update() ⇐ </span> <span>é chamado a cada frame do jogo , ele roda em loop infinito</span> <br>
+            <strong>Como ele é visto no Unity ?</strong> <br>
+            <span class="k">using</span> <span class="v">UnityEngine</span> <span class="p">;</span><br>
+            <span class="k">public</span> <span class="k">class</span> <span class="v">Metodos</span> : <span class="t">MonoBehaviour</span><br>
+            <span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//declaramos variáveis</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="k">void</span> <span class="m">Start</span> <span class="p">(</span> <span class="p">)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//iniciamos as variáveis , start roda 1 vez quando é iniciado</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="k">void</span> <span class="m">Update</span> <span class="p">(</span> <span class="p">)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//colocamos códigos de captura de teclas ou botões, roda a 60 fps</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span><br>
+            <span class="p">}</span><br>
+        `
+    },
+    'post-4': {
+        id: 'post-4',
+        category: 'Game Dev',
+        tag: 'Game Dev',
+        title: 'print e debug.log',
+        date: 'Publicado 11 de agosto de 2026',
+        image: 'assets/images/print_debuglog.jpg',
+        content: `
+            <span style="color: orangered;"> mostrando algo na tela ⇐ </span> <span>qual melhor print ou debug.log ?</span><br>
+            <span class="k">using</span> <span class="v">UnityEngine</span> <span class="p">;</span><br>
+            <br>
+            <span class="k">public</span> <span class="k">class</span> <span class="v">Metodos</span> : <span class="t">MonoBehaviour</span><br>
+            <span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="k">void</span> <span class="m">Start</span> <span class="p">(</span> <span class="p">)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//print só funciona para classe que tenha MonoBehaviour nela</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m">print</span> <span class="p">(</span> <span class="s">"hello world"</span> <span class="p">)</span> <span class="p">;</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//debug.log ela funciona em todas as classes é ideal para printar algo no console</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="s">"hello world"</span> <span class="p">)</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span><br>
+            <span class="p">}</span><br>
+            <br>
+        `
+    }
+    ,
+    'post-5': {
+        id: 'post-5',
+        category: 'Game Dev',
+        tag: 'Game Dev',
+        title: 'Incremento e Decremento',
+        date: 'Publicado 11 de agosto de 2026',
+        image: 'assets/images/incrementoEdecremento.jpg',
+        content: `
+            <h3>Incremento e Decremento </h3>
+            <span class="k">using</span> <span class="v">UnityEngine</span> <span class="p">;</span><br>
+            <br>
+            <span class="k">public</span> <span class="k">class</span> <span class="v">Metodos</span> : <span class="t">MonoBehaviour</span><br>
+            <span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//criando as variáveis</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">int</span> <span class="v">numero</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="k">void</span> <span class="m">Start</span> <span class="p">(</span> <span class="p">)</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">{</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//iniciando a variável com 0 , mas mesmo se não declarar como 0 ele já faz automaticamente</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">=</span> <span class="n">0</span> <span class="p">;</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//dizendo que meu numero que é 0 recebe ele mesmo que é 0 + 1 que fica 1</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">=</span> <span class="v">numero</span> <span class="o">+</span> <span class="n">1</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//podemos fazer o mesmo assim também</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">+</span> <span class="o">=</span> <span class="n">1</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//ou</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">+</span> <span class="o">+</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//todos estão incrementando em 1</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//outro teste vamos incrementar em 10 ou qualquer valor que você quiser , façam teste</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">=</span> <span class="v">numero</span> <span class="o">+</span> <span class="n">10</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//outra forma</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">+</span> <span class="o">=</span> <span class="n">10</span> <span class="p">;</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//vejamos que não colocamos o numero++ porque ele só incrementa de 1 em 1</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//--------------------------------------------------------------------------------------------</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//  DECREMENTANTO AGORA</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//--------------------------------------------------------------------------------------------</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//dizendo que meu numero que é 0 recebe ele mesmo que é 0 - 1 que fica -1</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">=</span> <span class="v">numero</span> <span class="o">-</span> <span class="n">1</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//podemos fazer o mesmo assim também</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">-</span> <span class="o">=</span> <span class="n">1</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//ou</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">-</span> <span class="o">-</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//todos estão incrementando em 1</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//outro teste vamos decrementar em 10 ou qualquer valor que você quiser , façam teste</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">=</span> <span class="v">numero</span> <span class="o">-</span> <span class="n">10</span> <span class="p">;</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//outra forma</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">numero</span> <span class="o">-</span> <span class="o">=</span> <span class="n">10</span> <span class="p">;</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//vejamos que não colocamos o numero-- porque ele só decrementa de 1 em 1</span><br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="p">}</span><br>
+            <span class="p">}</span><br>
+            <br>
+            <br>
+            <br>
+        `
     }
 };
 

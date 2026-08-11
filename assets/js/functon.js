@@ -97,7 +97,7 @@ const articlesData = {
         date: 'Publicado 10 de agosto de 2026',
         image: 'assets/images/variaveis.jpg',
         content: `
-            <p><b>🎮 Variáveis em C#</b>
+              <p><b>🎮 Variáveis em C#</b>
             Variáveis são como "caixinhas" com nome que guardam informações na memória do seu jogo — por exemplo, a vida do jogador, a velocidade, o nome do personagem ou se ele está pulando.
             A importância delas é enorme: são as variáveis que permitem ao código lembrar, alterar e tomar decisões em tempo real. É graças a elas que o placar aumenta, a vida diminui ao tomar dano e o personagem só pula quando está no chão.
             Em resumo: sem variáveis, o jogo seria uma imagem parada. Com elas, tudo ganha estado, memória e movimento. Dominar variáveis é o primeiro passo para criar suas próprias mecânicas na Unity! 🚀</p>
@@ -130,12 +130,12 @@ const articlesData = {
                 <li><span class="t">int:</span> Números inteiros.</li>
                 <li><span class="t">float:</span> Números com ponto flutuante (decimais).</li>
                 <li><span class="t">string:</span> Textos entre aspas duplas.</li>
-                <li><<span class="t">bool:</span> Valores booleanos (true/false).</li>
+                <li><span class="t">bool:</span> Valores booleanos (true/false).</li>
             </ul>
             <p><span class="t"> int </span> <span class="v">vidaPlayer </span> <span class="o"> = </span> <span class="n"> 10 </span> <span class="p">;<span></strong></p>
-            <p><span calss="t">float</span> <span class="v">forcaDoPulo</span> <span class="o">=</span> <span class="n">5.5f</span> <span class="p">;</span></strong> (necessita do <strong style="color:orangered">f</strong> no final)</p>
-            <p><span calss="t">bool</span> <span class="v">playerEstaVivo</span> <span class="o">=</span> <span class="n">true</span> <span class="p">;</span></strong></p>
-            <p><span calss="t">string</span> <span class="v">nomeDoPlayer</span> <span class="o">=</span> <span class="s">"Nilton"</span> <span class="p">;</span></p>
+            <p><span class="t"> float</span> <span class="v">forcaDoPulo</span> <span class="o">=</span> <span class="n">5.5f</span> <span class="p">;</span></strong> (necessita do <strong style="color:orangered">f</strong> no final)</p>
+            <p><span class="t">bool</span> <span class="v">playerEstaVivo</span> <span class="o">=</span> <span class="n">true</span> <span class="p">;</span></strong></p>
+            <p><span class="t">string</span> <span class="v">nomeDoPlayer</span> <span class="o">=</span> <span class="s">"Nilton"</span> <span class="p">;</span></p>
             <h2>Variáveis Locais e Globais</h2>
             <ul>
                 <li><b style="color:orange">Variáveis Globais ⇐</b> criadas fora de métodos, acessíveis em toda a classe.</li>

@@ -705,6 +705,122 @@ span[class] {
     100% { background-position: 200% center; }
 }
 
+/* ======================================================
+   SCROLLBAR PERSONALIZADA NEON RGB COM CUBOS / PARTICULAS
+   ====================================================== */
+
+/* Largura e estilo do trilho principal da Scrollbar */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* Trilho da Scrollbar (Track) */
+::-webkit-scrollbar-track {
+    background: #04060d;
+    border-left: 1px solid rgba(0, 242, 254, 0.1);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Botão de rolagem (Thumb) com gradiente dinâmico Neon RGB e brilho */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00f2fe, #9d4edd, #ff007f, #00f2fe);
+    background-size: 100% 300%;
+    border-radius: 8px;
+    border: 2px solid #04060d;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.6), 
+                0 0 20px rgba(157, 78, 221, 0.4);
+    animation: rgbScrollThumb 6s linear infinite;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff007f, #00f2fe, #00ff66, #ff007f);
+    background-size: 100% 300%;
+    box-shadow: 0 0 18px rgba(0, 242, 254, 0.9), 
+                0 0 30px rgba(255, 0, 127, 0.8);
+}
+
+/* Animação do fluxo de cores RGB na Scrollbar */
+@keyframes rgbScrollThumb {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Suporte Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00f2fe #04060d;
+}
+
+/* CUBOS DE PARTICULAS NEON RGB SAINDO DA SCROLLBAR */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    right: 3px;
+    width: 8px;
+    height: 8px;
+    z-index: 9999;
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 0 0 8px currentColor;
+    opacity: 0.85;
+}
+
+/* Cubo Neon 1 (Ciano / Roxo) */
+body::before {
+    top: 20%;
+    background: #00f2fe;
+    color: #00f2fe;
+    animation: neonCubeFloat1 5s ease-in-out infinite;
+}
+
+/* Cubo Neon 2 (Magenta / Verde RGB) */
+body::after {
+    top: 60%;
+    background: #ff007f;
+    color: #ff007f;
+    animation: neonCubeFloat2 7s ease-in-out infinite;
+}
+
+@keyframes neonCubeFloat1 {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(0.9);
+        opacity: 0.3;
+        box-shadow: 0 0 6px #00f2fe, -10px 15px 12px rgba(0, 242, 254, 0.2);
+    }
+    50% {
+        transform: translateY(-40px) translateX(-12px) rotate(180deg) scale(1.3);
+        opacity: 1;
+        box-shadow: 0 0 14px #9d4edd, -15px 25px 18px rgba(157, 78, 221, 0.5);
+    }
+    100% {
+        transform: translateY(-80px) translateX(-3px) rotate(360deg) scale(0.8);
+        opacity: 0.2;
+        box-shadow: 0 0 6px #00f2fe, -5px 10px 8px rgba(0, 242, 254, 0.2);
+    }
+}
+
+@keyframes neonCubeFloat2 {
+    0% {
+        transform: translateY(0px) rotate(0deg) scale(0.8);
+        opacity: 0.2;
+        box-shadow: 0 0 6px #ff007f, -8px -10px 10px rgba(255, 0, 127, 0.2);
+    }
+    50% {
+        transform: translateY(-50px) translateX(-15px) rotate(-180deg) scale(1.2);
+        opacity: 0.9;
+        box-shadow: 0 0 16px #00ff66, -18px -20px 20px rgba(0, 255, 102, 0.5);
+    }
+    100% {
+        transform: translateY(-100px) translateX(-2px) rotate(-360deg) scale(0.7);
+        opacity: 0.2;
+        box-shadow: 0 0 6px #ff007f, -5px -5px 8px rgba(255, 0, 127, 0.2);
+    }
+}
+
+
+
 span[class]:hover {
     transform: scale(1.15) translateY(-1px);
     filter: brightness(1.5);

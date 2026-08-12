@@ -365,7 +365,93 @@ const articlesData = {
             <br>
             <br>
         `
-    }
+    },
+    'post-6': {
+        id: 'post-6',
+        category: 'Game Dev',
+        tag: 'Game Dev',
+        title: 'Operadores Relacionais',
+        date: 'Publicado 11 de agosto de 2026',
+        image: 'assets/images/operadoresRelacional.jpg',
+        content: `
+            <h3>Operadores Relacionais</h3>
+            <ul>
+                <li> <span class="p"> == </span>⇐ igual</li>
+                <li> <span class="p"> != </span>⇐ diferente</li>
+                <li> <span class="p"> > </span>⇐ maior que</li>
+                <li> <span class="p"> >= </span>⇐ maior ou igual</li>
+                <li> <span class="p"> < </span>⇐ menor que</li>
+                <li> <span class="p"> <= </span>⇐ menor ou igual</li>
+            </ul>
+        `
+    },
+    'post-7': {
+        id: 'post-7',
+        category: 'Game Dev',
+        tag: 'Game Dev',
+        title: 'estruturas condicionais',
+        date: 'Publicado 11 de agosto de 2026',
+        image: 'assets/images/estruturaCondicionais.jpg',
+        content: `
+            <h3>Estrutura Condicional e operador ternário</h3>
+            <br>
+            <ul>
+                <li><strong>operador ternário ⇐ </strong> <span>precisa de 3 operandos (condição , valor caso verdadeiro e  valor caso falso)</span>
+                <br>
+                <span class="t">bool</span> <span class="v">win</span> <span class="o">=</span> <span class="v">true</span> <span class="p">;</span><br>
+                <span class="k">void</span> <span class="m">Start</span> <span class="p">(</span> <span class="p">)</span><br>
+                &nbsp;&nbsp;&nbsp;<span class="p">{</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t">string</span> <span class="v">resultado</span> <span class="o">=</span> <span class="v">win</span> ? <span class="s">"verdade"</span> : <span class="s">"falso"</span> <span class="p">;</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="v">resultado</span> <span class="p">)</span> <span class="p">;</span><br>
+                &nbsp;&nbsp;&nbsp;<span class="p">}</span><br>
+                <br>
+                <span>temos que atribuir o resultado do operador ternário dentro de uma variável </span>
+                <ul>
+                    <li> <span class="p"> ? </span> ⇐ <span>caso o valor for verdadeiro</span></li>
+                    <li> <span class="p"> : </span> <span> ⇐ caso o valor for falso</span></li>
+                </ul>
+                </li>
+                <br>
+                <li> <strong>Estrutura condicional</strong>
+                    <br>
+                    <span class="k">if</span> <span class="p">(</span> <span class="n">1</span> <span class="o">=</span> <span class="o">=</span> <span class="n">0</span> <span class="p">)</span><br>
+                    <span class="p">{</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="s">"sim é igual a 0"</span> <span class="p">)</span> <span class="p">;</span><br>
+                    <span class="p">}</span><br>
+                    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">1</span> <span class="o"><</span> <span class="n">0</span> <span class="p">)</span><br>
+                    <span class="p">{</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="s">"sim é menor que 0"</span> <span class="p">)</span> <span class="p">;</span><br>
+                    <span class="p">}</span><br>
+                    <span class="k">else</span><br>
+                    <span class="p">{</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t">Debug</span> <span class="p">.</span> <span class="m">Log</span> <span class="p">(</span> <span class="s">"sim é maior que 0"</span> <span class="p">)</span> <span class="p">;</span><br>
+                    <span class="p">}</span><br>
+                </li>
+                <br>
+                <li><strong>Switch</strong>
+                    <br>
+                    <span class="c">//primeiros temos que ter uma variável para usar no switch</span><br>
+                    <span class="t">int</span> <span class="v">contador</span> <span class="o">=</span> <span class="n">1</span> <span class="p">;</span><br>
+                    <br>
+                    <span class="c">//o switch pega apenas o valor do contado</span><br>
+                    <span class="m">switch</span> <span class="p">(</span> <span class="v">contador</span> <span class="p">)</span><br>
+                    <span class="p">{</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="v">case</span> <span class="n">1</span> :<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//código e depois colocamos o break para finalizar o switch</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">break</span> <span class="p">;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="v">case</span> <span class="n">2</span> :<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//código e depois colocamos o break para finalizar o switch</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">break</span> <span class="p">;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="v">default</span> :<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//caso nenhum acima for concedido usamos o default que é o valor padrão</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">//colocamos o código e finalizamos com o break;</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="v">break</span> <span class="p">;</span><br>
+                    <span class="p">}</span><br>
+                    <br>
+                </li>
+            </ul>
+        `
+    },
 };
 
 let selectedCategory = 'all';
